@@ -37,11 +37,8 @@ app.get('/', (req, res) => {
 // ROUTES
 app.use('/auth', authController)
 
-app.get('/vip-lounge', isSignedIn, (req, res) => {
-    res.send(`Welcome ✨`)
-})
 
 const port = process.env.PORT ? process.env.PORT : "3000"
 app.listen(port, () => {
-    console.log(`The express app is ready on port ${port}`)
+    console.log(`The express app is ready on  http://localhost:${port}/`)
 })
