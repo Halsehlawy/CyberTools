@@ -1,0 +1,22 @@
+<%- include('../partials/head') %>
+
+<h1>All Tools</h1>
+<div class="tools-list">
+  <% if (foundTools.length === 0) { %>
+    <p style="text-align:center;">No tools found.</p>
+  <% } else { %>
+    <% foundTools.forEach(tool => { %>
+      <div class="tool-card">
+        <a href="/tools/<%= tool._id %>">
+          <h2><%= tool.name %></h2>
+          <% if (tool.img) { %>
+            <img src="<%= tool.img %>" alt="<%= tool.name %>" style="max-width:150px;max-height:100px;" />
+          <% } %>
+        </a>
+        <p><%= tool.description %></p>
+      </div>
+    <% }) %>
+  <% } %>
+</div>
+</body>
+</html>

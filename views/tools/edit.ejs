@@ -1,0 +1,16 @@
+
+<%- include('../partials/head') %>
+    <h1>Edit Tool: <%= foundTool.name %></h1>
+    <form action="/tools/<%= foundTool._id %>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" value="<%= foundTool.name %>" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required><%= foundTool.description %></textarea>
+        <label for="img">Image URL:</label>
+        <input type="url" id="img" name="img" value="<%= foundTool.img %>" required>
+        <label for="link">Link:</label>
+        <input type="url" id="link" name="link" value="<%= foundTool.link %>" required>
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>

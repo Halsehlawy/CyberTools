@@ -1,0 +1,16 @@
+<%- include('../partials/head') %>
+
+    <h1>Create New Tool</h1>
+    <form action="/tools/" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        <label for="link">URL:</label>
+        <input type="url" id="link" name="link" required>
+        <label for="img">Image:</label>
+        <input type="url" id="img" name="img" required>
+        <button type="submit">Create</button>
+    </form>
+</body>
+</html>

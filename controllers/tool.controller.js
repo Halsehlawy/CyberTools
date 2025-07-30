@@ -13,7 +13,7 @@ router.get('/new', isSignedIn, (req, res) => {
 router.post('/', isSignedIn, async(req, res) => {
     try {
         req.body.publishedBy = req.session.user._id
-        const newTool = await Tool.create(req.body)
+        await Tool.create(req.body)
         res.redirect('/tools/')
     }
     catch(error){
@@ -43,10 +43,11 @@ router.get('/', async (req, res) => {
 // Show edit tool form
 router.get('/:toolId/edit', async (req, res) => {
     const foundTool = await Tool.findById(req.params.toolId).populate('publishedBy')
-    if (foundTool.seller._id.equals(req.session.user._id)) {
+    if (foundTool.publishedBy._id.equals(req.session.user._id)) {
         return res.render('tools/edit.ejs', { foundTool: foundTool })
     }
 })
+
 // Update tool in database
 router.put('/:toolId', async (req, res) => {
     try {
@@ -78,3 +79,5 @@ router.delete('/:toolId', async (req, res) => {
         res.send('Something went wrong')
     }
 })
+
+module.exports = router;

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const userSchema = new mongoose.Schema({
+const toolSchema = new mongoose.Schema({
     name: {
         type: String,
         required: true,
@@ -24,5 +24,5 @@ const userSchema = new mongoose.Schema({
     },
 }, { timestamps: true })
 
-const User = mongoose.model('User', userSchema)
-module.exports = User
+const Tool = mongoose.model('Tool', toolSchema)
+module.exports = Tool

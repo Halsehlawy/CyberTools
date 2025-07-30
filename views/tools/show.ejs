@@ -1,0 +1,15 @@
+<%- include('../partials/head') %>
+
+    <div class="tool-details">
+      <h1><%= foundTool.name %></h1>
+      <img src="<%= foundTool.img %>" alt="<%= foundTool.name %>">
+      <p><strong>Description:</strong> <%= foundTool.description %></p>
+      <p><strong>Link:</strong> <a href="<%= foundTool.link %>" target="_blank"><%= foundTool.link %></a></p>
+      <p><strong>Published by:</strong> <%= foundTool.publishedBy.username %></p>
+      <a href="/tools/<%= foundTool._id %>/edit" class="button-link">Edit</a>
+      <form action="/tools/<%= foundTool._id %>?_method=DELETE" method="POST" style="display:inline;">
+        <button type="submit">Delete</button>
+      </form>
+    </div>
+</body>
+</html>

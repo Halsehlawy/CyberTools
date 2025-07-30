@@ -1,0 +1,223 @@
+/* Show page styling */
+.tool-details {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  text-align: center;
+}
+.tool-details h1 {
+  margin-top: 0;
+  color: #222;
+  font-size: 2em;
+  font-weight: 600;
+}
+.tool-details img {
+  max-width: 320px;
+  max-height: 200px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.tool-details p {
+  color: #444;
+  font-size: 1.08em;
+  margin: 12px 0;
+}
+.tool-details a.button-link {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px 5px 0 5px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+}
+.tool-details form button {
+  display: initial;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px 5px 0 5px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: none;
+}
+.tool-details a.button-link:hover, .tool-details button:hover {
+  background: #ffd700;
+  color: #222;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background: #222;
+  padding: 12px 0;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav ul li {
+  margin: 0 18px;
+}
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+h1 {
+  color: #222;
+  text-align: center;
+  margin-top: 32px;
+}
+
+form {
+  background: #fff;
+  padding: 22px;
+  border-radius: 8px;
+  max-width: 480px;
+  margin: 32px auto;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+label {
+  display: block;
+  margin-top: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+  transition: background 0.2s, color 0.2s;
+}
+button:hover {
+  background: #ffd700;
+  color: #222;
+}
+
+img {
+  display: block;
+  margin: 18px auto;
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Tool cards for index.ejs */
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+  margin: 32px auto;
+  max-width: 1100px;
+}
+.tool-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 18px;
+  width: 240px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+.tool-card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+}
+.tool-card h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.15em;
+  color: #222;
+}
+.tool-card img {
+  margin-bottom: 10px;
+  max-width: 100%;
+  border-radius: 4px;
+}
+.tool-card p {
+  color: #555;
+  font-size: 0.97em;
+  margin: 0;
+}
+
+/* Tool details for show.ejs */
+.tool-details {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 28px;
+  text-align: center;
+}
+.tool-details h1 {
+  margin-top: 0;
+  color: #222;
+}
+.tool-details img {
+  max-width: 350px;
+  max-height: 220px;
+  margin: 20px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.tool-details p {
+  color: #555;
+  font-size: 1.05em;
+  margin: 10px 0;
+}
+.tool-details a.button-link, .tool-details button {
+  display: inline-block;
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1em;
+  margin: 10px 5px 0 5px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.tool-details a.button-link:hover, .tool-details button:hover {
+  background: #ffd700;
+  color: #222;
+}
